@@ -18,4 +18,4 @@ const Categoria = new Schema({
 
 })
 
-mongoose.model('Categoria', Categoria );
+mongoose.model('categorias', Categoria );
