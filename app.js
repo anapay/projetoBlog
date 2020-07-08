@@ -17,11 +17,19 @@ app.use(bodyParser.json())
 app.engine("handlebars", handlebars({ defaultLayout: "main" }))
 app.set("view engine", "handlebars")
 
+//mongoose
+mongoose.Promise = global.Promise
+mongoose.connect("mongodb://localhost/blog").then(() => {
+    console.log("Mongo Conectado!")
+}).catch((err) => {
+    console.log("Erro ao se conectar com o banco: "+err);
+})
+
 //public arquivos staticos
 app.use(express.static(path.join(__dirname, "public")))
 
 //rotas
-app.use("/admin",admin)
+app.use("/admin", admin)
 
 
 //outros
