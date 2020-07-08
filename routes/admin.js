@@ -34,7 +34,7 @@ if (req.body.length < 2) {
     erros.push({ text: "Nome da categoria é menor que o suportado!" })
 }
 if (erros.length > 0) {
-    res.render("addcategorias", { erros: erros })
+    res.render("admin/addcategorias", { erros: erros })
 }
 
 
