@@ -19,8 +19,8 @@ app.use(session({
 app.use(flash())
 
 //middleware
-app.use((req, res, next) =>{
-    res.locals.success_msg = req.flash(success_msg)
+app.use((req, res, next) => {
+    res.locals.success_msg = req.flash("success_msg")
     res.locals.error_msg = req.flash("error_msg")
     next()
 })
@@ -38,7 +38,7 @@ mongoose.Promise = global.Promise
 mongoose.connect("mongodb://localhost/blog").then(() => {
     console.log("Mongo Conectado!")
 }).catch((err) => {
-    console.log("Erro ao se conectar com o banco: "+err);
+    console.log("Erro ao se conectar com o banco: " + err);
 })
 
 //public arquivos staticos
