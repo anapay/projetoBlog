@@ -43,10 +43,12 @@ router.post("/categorias/nova", (req, res) => {
         }
 
         new Categoria(novaCategoria).save().then(() => {
+            req.flash("success_msg", "Categoria salva com sucesso!")
             res.redirect("/admin/categorias")
 
         }).catch((err) => {
-            console.log("Erro ao salvar categoria" + err);
+            req.flash("error_msg", "Erro ao salvar categoria, tente novamente!" )
+            res.redirect("/admin" + err);
 
         })
     }
