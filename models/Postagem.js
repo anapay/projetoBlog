@@ -11,7 +11,7 @@ const Postagem = new Schema({
         type: String,
         required: true
     },
-    descrição: {
+    descricao: {
         type: String,
         required: true
     },
@@ -29,3 +29,5 @@ const Postagem = new Schema({
         default: Date.now()
     }
 })
+
+mongoose.model('postagens', Postagem );
