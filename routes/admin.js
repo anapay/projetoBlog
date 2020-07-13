@@ -14,7 +14,7 @@ router.get("/posts", (req, res) => {
 })
 
 router.get("/categorias", (req, res) => {
-    Categoria.find().lean().then((categorias) => {
+    Categoria.find().sort({date: "desc"}).lean().then((categorias) => {
         res.render("admin/categorias", {categorias: categorias})
         
        
