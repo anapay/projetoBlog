@@ -2,7 +2,7 @@
 
 <h2>Lista de Categorias:</h2>
 <hr>
-<a href="/admin/categorias/add"><button class="btn btn-success"  style="background-color: #df567d;">Nova Categoria</button></a>
+<a href="/admin/categorias/add"><button class="btn btn-success"  style="background-color: #a74b65;">Nova Categoria</button></a>
 
 {{#each categorias}}
   <div class="card mt-4"> 
@@ -11,8 +11,8 @@
           {{nome}}
       </h4>
       <small>Slug: {{slug}}</small><br>
-      <small>Data de Postagem: {{date}}</small>
-      <a href="/admin/categorias/edit{{_id}}"><button class="btn btn-success">Editar Categoria</button></a>
+      <small>Data de Postagem: {{date}}</small><br>
+      <a href="/admin/categorias/edit/{{_id}}"><button class="btn btn-success mt-4"  style="background-color: #df567d;" >Editar Categoria</button></a>
     </div>
   </div>
 {{else}}
