@@ -8,9 +8,9 @@
     <div class="card-body">
         <form action="/admin/categorias/nova" method="POST">
             <label for="nome">Nome: </label>
-            <input type="text" id="nome" name="nome" placeholder="Nome da Categoria" class="form-control">
+            <input type="text" id="nome" name="nome" placeholder="Nome da Categoria" class="form-control" value="{{categoria.nome}}">
             <label for="slug">Slug: </label>
-            <input type="text" id="slug" name="slug" placeholder="Slug da Categoria" class="form-control">
+            <input type="text" id="slug" name="slug" placeholder="Slug da Categoria" class="form-control" value="{{categoria.slug}}">
             <br>
             <button type="submit" class="btn btn-success" style="background-color: #df567d;"> Editar Categoria </button>
         </form>
