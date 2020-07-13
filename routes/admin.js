@@ -61,6 +61,9 @@ router.post("/categorias/nova", (req, res) => {
     }
 
 })
+router.get("/categorias/edit/:id", (req, res) => {
+    
+})
 
 
 
