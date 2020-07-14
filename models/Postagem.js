@@ -21,7 +21,7 @@ const Postagem = new Schema({
     },
     categoria: {
         type: Schema.Types.ObjectId,
-        req: "categorias",
+        ref: "categorias",
         required: true
     },
     data: {
