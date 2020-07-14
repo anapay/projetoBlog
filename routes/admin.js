@@ -178,7 +178,7 @@ router.get("/postagens/edit/:id", (req, res) => {
 router.post("/postagem/edit", (req, res) => {
 
 
-    Postagem.findOne({_id: req.body.id}).then((postagem) => {
+    Postagem.findOne({ _id: req.body.id }).then((postagem) => {
 
         postagem.titulo = req.body.titulo
         postagem.slug = req.body.slug
@@ -192,7 +192,7 @@ router.post("/postagem/edit", (req, res) => {
         }).catch((err) => {
             req.flash("error_msg", "Erro interno!")
             console.log(err);
-            
+
             res.redirect("/admin/postagens")
         })
 
@@ -202,8 +202,9 @@ router.post("/postagem/edit", (req, res) => {
         res.redirect("/admin/postagens")
     })
 })
+
 router.get("/postagens/deletar/:id", (req, res) => {
-    Postagem.remove({_id: req.params.id}).then(() => {
+    Postagem.remove({ _id: req.params.id }).then(() => {
         req.flash("success_msg", "Post deletado com sucesso!")
         res.redirect("/admin/postagens")
     }).catch((err) => {
