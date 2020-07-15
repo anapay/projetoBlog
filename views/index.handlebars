@@ -1,0 +1,32 @@
+<div class="jumbotron">
+    <h1 class="display-4">Bem-vindo ao Blog da Jennie!</h1>
+    <p class="lead">
+        Tudo sobre Kpop!
+    </p>
+    <hr class="my-4">
+    <p>
+        Tour, looks, viajens, família, e amores da Jennie!
+    </p>
+    <p>By Ana Clara.</p>
+    <a class="btn btn-primary btn-lg" style="background-color: #8a5a8a;" href="#" role="button">Crie uma Conta</a>
+</div>
+<hr>
+<h2>Posts!</h2>
+
+{{#each postagens}}
+<div class="card mt-4">
+    <div class="card-body">
+        <h3>{{titulo}}</h3>
+        <p>{{descricao}}</p>
+        <hr>
+        <a href="/postagem/{{slug}}"><button class="btn btn-success" style="background-color: #8a5a8a;">Leia mais...</button></a>
+        <small>Categoria: {{categoria.nome}}</small><br>
+        <small>Data de Pulblicação: {{data}}</small>
+
+    </div>
+</div>
+{{else}}
+
+<h5>Nenhum Post</h5>
+
+{{/each}}
