@@ -1,0 +1,11 @@
+
+
+<div class="card mt-4">
+    <div class="card-body" style="color: #854d77;"><h3>Categorias</h3></div>
+    <div class="card-body">
+        {{#each categorias}}
+        <a href="/categorias/{{slug}}"><h5>{{nome}}</h5></a>
+        {{else}}
+        {{/each}}
+    </div>
+</div>
