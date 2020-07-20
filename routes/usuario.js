@@ -62,7 +62,7 @@ router.post("/registro", (req, res) => {
                         novoUsuario.senha = hash
 
                         novoUsuario.save().then(() => {
-                            req.flash("success_msg", "Usúario cadasrado com sucesso!")
+                            req.flash("success_msg", "Usúario cadastrado com sucesso!")
                             res.redirect("/")
                         }).catch((err) => {
 
